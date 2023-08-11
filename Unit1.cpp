@@ -653,7 +653,7 @@ void run (string inputFileName,string outputFileName ) {
 	}
 	fprintf(FOUT,"\n"); fclose(FOUT);
   } else {
-      cout << "没有读到";
+      cout << "Failed to open file";
   }
     // 输出结果到控制台
     FILE* FRESULT = fopen(outNameCOD.c_str(), "r");

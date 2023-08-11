@@ -13,12 +13,11 @@ int main(int argc, char *argv[]) {
         printf("请提供源程序文件名称和操作名称！\n");
         return 1;
     }
-
     FILE *inputFile, *outputFile;
     char buffer[MAX_SIZE];
 
 //    string filename = "E01";
-    char filename[] = "P9101";
+//    char filename[] = "P9101";
     // 构造输入文件的完整路径
     char inputFileName[MAX_SIZE];
     snprintf(inputFileName, sizeof(inputFileName), "./%s.PL0", argv[1]);
