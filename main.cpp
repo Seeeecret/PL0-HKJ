@@ -8,10 +8,11 @@ using namespace std;
 #define MAX_SIZE 1000
 
 int main(int argc, char *argv[]) {
-//    if (argc != 3) {
-//        printf("请提供源程序文件名称和操作名称！\n");
-//        return 1;
-//    }
+//    TODO:此处需要注意，日后可能需要加上判断Action的逻辑
+    if (argc != 3) {
+        printf("请提供源程序文件名称和操作名称！\n");
+        return 1;
+    }
 
     FILE *inputFile, *outputFile;
     char buffer[MAX_SIZE];
