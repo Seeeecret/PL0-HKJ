@@ -581,7 +581,7 @@ void Interpret() {
   fprintf(FOUT,"~~~ END PL0 ~~~\n");
 } /*Interpret*/
 //---------------------------------------------------------------------------
-void run () {
+void run (string inputFileName,string outputFileName ) {
   for (CH=' '; CH<='^'; CH++) SSYM[CH]=NUL;
   strcpy(KWORD[ 1],"BEGIN");    strcpy(KWORD[ 2],"CALL");
   strcpy(KWORD[ 3],"CONST");    strcpy(KWORD[ 4],"DO");
@@ -627,8 +627,9 @@ void run () {
   FACBEGSYS[LPAREN]=1;
 
   //TODO打开文件名,对接后改
-  string outNamePL0 = "D:\\study\\QG\\c++Builder\\PL0 Backup\\E01.PL0";
-  string outNameCOD = "E01.COD";
+//  将输入输出路径位置改成run函数相应地参数
+  string outNamePL0 = inputFileName;
+  string outNameCOD = outputFileName;
   if ((FIN=fopen(outNamePL0.c_str(),"r"))!=0) {
 	FOUT=fopen(outNameCOD.c_str(),"w");
     fprintf(FOUT,"=== COMPILE PL0 ===\n");

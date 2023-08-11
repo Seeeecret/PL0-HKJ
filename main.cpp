@@ -5,6 +5,8 @@
 #include "Unit1.h"
 using namespace std;
 
-int main(){
-    run();
+int main(int argc,char *argv[]){
+
+
+    run("E01.PL0","D:\\E01.COD");
 }
